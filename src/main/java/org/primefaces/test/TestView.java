@@ -1,6 +1,7 @@
 package org.primefaces.test;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -22,6 +23,11 @@ public class TestView implements Serializable {
     private BigDecimal decimal;
     private LocalDateTime localDateTime;
     private List<TestObject> list;
+
+    boolean calendar = false;
+    LocalDate date = null;
+
+    private TestObject selected;
     
     @PostConstruct  
     public void init() {
@@ -32,6 +38,10 @@ public class TestView implements Serializable {
                 new TestObject("The Bodyguard", "Whitney Houston", 1992),
                 new TestObject("The Dark Side of the Moon", "Pink Floyd", 1973)
         ));
+    }
+
+    public void switchCalendar() {
+        calendar = !calendar;
     }
 
 }

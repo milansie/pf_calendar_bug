@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    DatePicker:
+    <p:datePicker
+            id="datePicker"
+            value="#{testView.date}"
+            showIcon="true"
+    />
+
+    <br /><br />
+    Calendar:
+    <p:calendar
+            id="calendar"
+            value="#{testView.date}"
+            showIcon="true"
+    />
+
+    <br />
+
+</ui:composition>
